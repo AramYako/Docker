@@ -26,11 +26,15 @@ Output format:  docker ps -a --format=$formatNice
 ```
 docker exec -it <id> /bin/bash
 ```
+![image](https://user-images.githubusercontent.com/29054168/211686326-47fa4537-ad29-4ca1-95ec-b2327701e622.png)
 
 ## Volume
 ```
 ## Volume read only source
 docker run --name website -v C:\Repo\DockerTest:/usr/share/nginx/html:ro -d -p 8080:80 nginx:latest
+
+![image](https://user-images.githubusercontent.com/29054168/211686326-47fa4537-ad29-4ca1-95ec-b2327701e622.png)
+
 
 ## Volume with write able source 
 docker run --name website -v ${PWD}:/usr/share/nginx/html -d -p 8080:80 nginx:latest
