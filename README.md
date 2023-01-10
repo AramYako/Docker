@@ -41,5 +41,5 @@ docker run --name website -v C:\Repo\DockerTest:/usr/share/nginx/html:ro -d -p 8
 docker run --name website -v ${PWD}:/usr/share/nginx/html -d -p 8080:80 nginx:latest
 
 ## Volume current work directory 
-docker run --name website -v ${PWD}::/usr/share/nginx/html -d -p 8080:80 nginx:latest
+docker run --name website -v ${PWD}:/usr/share/nginx/html -d -p 8080:80 nginx:latest
 ```
