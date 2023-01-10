@@ -36,6 +36,10 @@ docker run --name website -v C:\Repo\DockerTest:/usr/share/nginx/html:ro -d -p 8
 ```
 
 ## Volume write source
+
+![image](https://user-images.githubusercontent.com/29054168/211686797-d3083bde-a306-4c49-ad3c-1350c1132485.png)
+
+### If file is created in the destination, it is also created in the source
 ```
 ## Volume with write able source 
 docker run --name website -v ${PWD}:/usr/share/nginx/html -d -p 8080:80 nginx:latest
