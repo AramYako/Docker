@@ -24,6 +24,6 @@ Output format:  docker ps -a --format=$formatNice
 ```
 ## Shell on container
 ```
-docker exec -it 7f3fd49ba9c3 /bin/bash
+docker exec -it <id> /bin/bash
 ```
 
