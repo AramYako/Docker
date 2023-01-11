@@ -47,3 +47,11 @@ docker run --name website -v ${PWD}:/usr/share/nginx/html -d -p 8080:80 nginx:la
 ## Volume current work directory 
 docker run --name website -v ${PWD}:/usr/share/nginx/html -d -p 8080:80 nginx:latest
 ```
+
+### Share volume containers
+```
+## Volume will point at another container called  "charming_sanderson" and use its volume 
+docker run --volumes-from charming_sanderson -d -p 8081:80 nginx
+
+```
+
