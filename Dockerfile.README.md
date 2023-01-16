@@ -5,7 +5,7 @@
 
 ## Simple file
 
-![image](https://user-images.githubusercontent.com/29054168/212773352-261eb7bc-91de-4bd5-8bb0-84ef0a0ed8b1.png)
+![image](https://user-images.githubusercontent.com/29054168/212776791-55edf969-8979-43de-9372-08ea0feffa42.png)
 
 
 ```
