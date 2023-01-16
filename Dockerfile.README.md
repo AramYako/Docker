@@ -1,6 +1,9 @@
 
 # Docker file commands
 
+![image](https://user-images.githubusercontent.com/29054168/212777285-91af803f-b616-412d-811f-edf97741e928.png)
+
+
 ### BUILD docker file to image
 ```
 docker build  -t name:version . (source)
