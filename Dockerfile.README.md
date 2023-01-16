@@ -13,5 +13,9 @@ FROM: What Base image to use: nginx:latest
 Add: . (add all content in current directory) and  (/usr/share/nginx/html): Destination
 ```
 
+### BUILD docker file to image
+```
+docker build  -t name:version . (source)
+```
 
 
