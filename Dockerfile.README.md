@@ -1,6 +1,10 @@
 
 # Docker file commands
 
+### BUILD docker file to image
+```
+docker build  -t name:version . (source)
+```
 
 
 ## Simple file
@@ -13,9 +17,12 @@ FROM: What Base image to use: nginx:latest
 Copy: . (Copy all content in current directory) and  (/usr/share/nginx/html): Destination
 ```
 
-### BUILD docker file to image
+### WORKDIR
+![image](https://user-images.githubusercontent.com/29054168/212777040-fe5b71d6-d0d9-4974-9651-a78bf52b7adf.png)
+
 ```
-docker build  -t name:version . (source)
+Created a work directory when creating container. Here the sources files are copied
+- The WORKDIR instruction sets the working directory for any RUN, CMD, ENTRYPOINT, COPY and ADD instructions that follow it in the Dockerfile.
 ```
 
 
