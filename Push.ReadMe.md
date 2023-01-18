@@ -4,7 +4,7 @@ First step is to tag the image to namespace/repository:tagName
 - docker tag image:version namespace/repository:tagName
 
 Second step is to push the image that we tagged
-docker push namespace/repository:tagName
+- docker push namespace/repository:tagName
 
 ```
 
