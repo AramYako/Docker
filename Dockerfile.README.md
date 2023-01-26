@@ -6,7 +6,7 @@
 
 ### BUILD docker file to image
 ```
-docker build  -t name:version . (source)
+docker build  -t namespace/repository:tagName . (source)
 ```
 
 
