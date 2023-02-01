@@ -43,6 +43,8 @@ docker run --name website -v C:\Repo\DockerTest:/usr/share/nginx/html:ro -d -p 8
 ```
 ## Volume with write able source 
 docker run --name website -v ${PWD}:/usr/share/nginx/html -d -p 8080:80 nginx:latest
+--------For windows--------
+docker run -d -p 6379:6379 --name redisdb -v %cd%:/data redis:latest
 
 ## Volume current work directory 
 docker run --name website -v ${PWD}:/usr/share/nginx/html -d -p 8080:80 nginx:latest
