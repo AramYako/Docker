@@ -7,7 +7,7 @@
 
 
 ```
-Up: docker-compose up 
+Up: docker-compose up -d
 Down: dokcer-compose down
-Build and up: docker-compose up --build
+Build and up: docker-compose up --build -d
 ```
