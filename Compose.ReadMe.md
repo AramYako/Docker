@@ -10,4 +10,5 @@
 Up: docker-compose up -d
 Down: dokcer-compose down
 Build and up: docker-compose up --build -d
+Status for container in compose: docker-compose ps
 ```
