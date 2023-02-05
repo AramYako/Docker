@@ -30,4 +30,17 @@ Created a work directory when creating container. Here the sources files are cop
 - The WORKDIR instruction sets the working directory for any RUN, CMD, ENTRYPOINT, COPY and ADD instructions that follow it in the Dockerfile.
 ```
 
+Multi stage build
+```
+FROM node:16-alpine as builder
+WORKDIR '/app'
+COPY package.json . 
+RUN npm install
+COPY . .
+RUN npm run build
+
+FROM nginx:latest
+COPY --from=builder /app/build /usr/share/nginx/html
+
+```
 
