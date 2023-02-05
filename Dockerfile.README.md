@@ -7,6 +7,8 @@
 ### BUILD docker file to image
 ```
 docker build  -t namespace/repository:tagName . (source)
+docker build -f dockerfiles/Dockerfile.prod  -t myapp_prod .
+
 ```
 
 
