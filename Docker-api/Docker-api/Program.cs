@@ -1,5 +1,4 @@
-using Docker_api.Models;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,16 +8,32 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-builder.Services.AddDbContext<ColourContext>(options =>
-options.UseSqlServer($"Server={builder.Configuration["DBServer"]?? "localhost"},{builder.Configuration["DBPort"] ?? "1443"}; Initial Catalog={builder.Configuration["Database"] ?? "Colours"}; User ID = {builder.Configuration["DBUser"]?? "SA"};Password={builder.Configuration["DBPassword"] ?? "Pa$$word2022"}"));
+
+//Goal connect to redis   (Done)
+//Make sure it works      (Done)
+//Add connection to       (Done)
+//dev app settings        (Done)
+//Staging  app settings   (Done)
+//Prod app settings       (Done)
+//composite settings with override (Done)
+//Verify dev container doesnt use compsite  (Done)
+//Up composite and test it  (Done)
+//Up composite and then debug dev container
+
+
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    string server = builder.Configuration["redis:server"] ?? throw new Exception("Startup fail");
+
+    string port = builder.Configuration["redis:port"] ?? throw new Exception("Startup fail2");
+
+    string cnstring = $"{server}:{port}";
+
+    options.Configuration = cnstring;
+});
 
 
 var app = builder.Build();
-
-var server = app.Configuration.GetValue<string>("DBServer") ?? "localhost";
-var port = app.Configuration.GetValue<string>("DBPort") ?? "1443";
-var user = app.Configuration.GetValue<string>("DBUser") ?? "SA";
-var password = app.Configuration.GetValue<string>("DBPassword") ?? "Pa$$word2022";
 
 
 

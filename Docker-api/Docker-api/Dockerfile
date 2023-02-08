@@ -6,9 +6,10 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["Docker-api.csproj", "./"]
-RUN dotnet restore "Docker-api.csproj"
+COPY ["Docker-api/Docker-api.csproj", "Docker-api/"]
+RUN dotnet restore "Docker-api/Docker-api.csproj"
 COPY . .
+WORKDIR "/src/Docker-api"
 RUN dotnet build "Docker-api.csproj" -c Release -o /app/build
 
 FROM build AS publish

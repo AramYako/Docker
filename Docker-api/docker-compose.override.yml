@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  docker-api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - redis:server=redisdb
+      - redis:port=6379
+    ports:
+      - "8080:80"
+
+  redisdb:
+    restart: always
+    ports:
+      - "6379:6379"
